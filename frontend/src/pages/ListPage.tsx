@@ -37,13 +37,14 @@ function ListPage() {
                     <li
                         key={post.id}
                         onClick={() => navigate(`/post/${post.id}`)}
-                        style={{ cursor: 'pointer', marginBottom:'10px' }}
+                        style={{ cursor: 'pointer', marginBottom: '10px' }}
                     >
                         <strong>{post.title}</strong> - {post.author} ({post.date})    
                     </li>
                 ))}
             </ul>
         </div>
-        }
-    )
+    );
 }
+
+export default ListPage

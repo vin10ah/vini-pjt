@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function CreatePage() {
@@ -10,7 +10,7 @@ function CreatePage() {
     const [content, setContent] = useState('');
 
     // 등록 버튼 클릭 시
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.SubmitEvent) => {
         e.preventDefault(); // 폼 기본 동작 막기
 
         // 아직 DB가 없으니 콘솔로 출력
@@ -60,3 +60,5 @@ function CreatePage() {
         </div>
     );
 };
+
+export default CreatePage
